@@ -8,9 +8,36 @@ export type ScaffoldConfig = {
   onlyLocalBurnerWallet: boolean;
 };
 
+console.log(chains?.zetachain)
+
+export const xenea = {
+  id: 5555,
+  name: 'CVC Kura',
+  network: 'CVC Kura',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'CVC Kura',
+    symbol: 'XCR',
+  },
+  rpcUrls: {
+    public: { http: ['https://rpc-kura.cross.technology/'] },
+    default: { http: ['https://rpc-kura.cross.technology/'] },
+  },
+  blockExplorers: {
+    etherscan: { name: 'CVC Kura', url: 'https://testnet.crossvaluescan.com/' },
+    default: { name: 'CVC Kura', url: 'https://testnet.crossvaluescan.com/' },
+  },
+  contracts: {
+    multicall3: {
+      address: '0x914e5D06d4fc0856C09aE99d47B21124a3B4bC0B',
+      // blockCreated: 11_907_934,
+    },
+  },
+} 
+
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.zkSyncSepoliaTestnet],
+  targetNetworks: [xenea],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)
