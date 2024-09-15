@@ -3,7 +3,6 @@ import type { ChangeEvent } from "react";
 import { walletClient } from "~~/utils/wagmi"
 import CustomInput from '~~/components/CustomInput'
 import { zkexchange } from '~~/contracts/zkexchange';
-import { getGeneralPaymasterInput } from "viem/zksync";
 import { toast } from "react-toastify";
 
 const Order = () => {
@@ -44,11 +43,7 @@ const Order = () => {
         functionName: "placeSellOrder",
         args: [amountInToken, amountInCon, currency, tokenAddress],
         value: amountInToken,
-        account,
-        paymaster: paymasterAddress,
-        paymasterInput: getGeneralPaymasterInput({
-          innerInput: new Uint8Array()
-        })
+        account
       })
       handleClear()
       setLoading(false)

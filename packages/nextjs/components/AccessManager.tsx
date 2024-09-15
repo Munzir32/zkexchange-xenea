@@ -56,11 +56,7 @@ const handleClear = () => {
                 abi: zkexchange.abi,
                 functionName: "grantRole",
                 args: [manager_role as `0x${string}`, accountM],
-                account,
-                paymaster: paymasterAddress,
-                paymasterInput: getGeneralPaymasterInput({
-                    innerInput: new Uint8Array()
-                })
+                account
             })
             handleClear()
             setLoading(false)

@@ -8,7 +8,7 @@ export type ScaffoldConfig = {
   onlyLocalBurnerWallet: boolean;
 };
 
-console.log(chains?.zetachain)
+
 
 export const xenea = {
   id: 5555,

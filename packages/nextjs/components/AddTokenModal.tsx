@@ -40,11 +40,7 @@ const AddTokenModal = () => {
                 abi: zkexchange.abi,
                 functionName: "addToken",
                 args: [tokenAddress, fee, min, max],
-                account,
-                paymaster: paymasterAddress,
-                paymasterInput: getGeneralPaymasterInput({
-                    innerInput: new Uint8Array()
-                })
+                account
             })
             // setLoading(false)
        

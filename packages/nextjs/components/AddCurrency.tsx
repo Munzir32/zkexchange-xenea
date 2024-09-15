@@ -3,6 +3,7 @@ import CustomInput from './CustomInput';
 import { zkexchange } from '~~/contracts/zkexchange';
 import { getGeneralPaymasterInput } from "viem/zksync";
 import { toast } from "react-toastify";
+// import {}
 import { walletClient } from "~~/utils/wagmi"
 
 const Addcurrency = () => {
@@ -43,10 +44,6 @@ const Addcurrency = () => {
                 functionName: "addCurrency",
                 args: [currency, fee, min, max],
                 account,
-                paymaster: paymasterAddress,
-                paymasterInput: getGeneralPaymasterInput({
-                    innerInput: new Uint8Array()
-                })
             })
             // setLoading(false)
        
