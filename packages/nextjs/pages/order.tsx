@@ -11,7 +11,7 @@ const Order = () => {
   const [currency, setCurrency] = useState<string>('ngn')
   const [tokenAddress, settokenAddress] = useState<any>('0x493257fD37EDB34451f62EDf8D2a0C418852bA4C')
   const [loading, setLoading] = useState(false)
-  const paymasterAddress = "0xBAb868Bfd8BB3e1B3Adaec62c69CE5DA6FEb3879"
+
   // const isFormFilled = amountInCon && amountInToken && currency && tokenAddress
 
   const handleClear = () => {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CustomInput from './CustomInput';
 import { zkexchange } from '~~/contracts/zkexchange';
-import { getGeneralPaymasterInput } from "viem/zksync";
 import { toast } from "react-toastify";
 import { walletClient } from "~~/utils/wagmi"
 import { useReadContract } from 'wagmi';
@@ -35,7 +34,6 @@ const handleClear = () => {
     const [loading, setLoading] = useState(false)
     // const isFormFilled = tokenAddress && fee && min && max
 
-    const paymasterAddress = "0xBAb868Bfd8BB3e1B3Adaec62c69CE5DA6FEb3879"
     const handleManageRole = async () => {
         setLoading(true)
         // if (!isFormFilled) throw new Error("fill the form")
